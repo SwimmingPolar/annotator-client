@@ -1,0 +1,14 @@
+version: "3"
+networks:
+  annotatorweb-dev:
+    external: false
+
+services:
+  development:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "60143:60143"
+    networks:
+      - annotatorweb-dev
